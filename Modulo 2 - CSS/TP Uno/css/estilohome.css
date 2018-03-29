@@ -1,0 +1,16 @@
+*{		
+}
+
+body
+
+{ border: solid 1px black;	
+  width: 80%;	
+  margin: 50px;	
+  padding: 50px;		
+  background-color: black; }	
+
+.btn-group	
+
+{ 			
+  float: right;	
+}
