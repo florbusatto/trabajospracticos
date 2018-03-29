@@ -29,7 +29,8 @@ Van a poder ver mi progreso a través de los distintos Tps de los siguientes mó
            4) Challenge!: Como en ADA ITW nos encantan los desafíos, volvemos a la comida para armar nuestra mejor opción de menú.  
            5) TP Dos: MEMOTEST ADA.
            
--Módulo 4: Ajax-jQuery. 
+-Módulo 4: Ajax-jQuery.   
+
            1) Ejercicios jQuery.  
            2) TP Cuatro: Diseñamos una planilla para nuestra primera encuesta, usando Ajax Json.
            
