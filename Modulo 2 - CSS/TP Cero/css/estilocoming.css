@@ -1,0 +1,79 @@
+			
+.container
+{				
+ margin: 50px;	
+ padding: 50px;	
+ width: 1500px;	
+ height: 800px;	
+ border:solid 1px black;	 
+}	
+
+ h1	
+{  	
+ font-family: sans-serif;	
+ font-family: arial;
+ font-size: xx-large;
+ font-weight: bold;			
+ margin-left: 50px;			
+ margin-bottom: -50px;	
+ padding-bottom: 10px;			
+ }			
+
+h2	
+{	
+ display: inline-block;
+ font-family: serif;	
+ font-family: verdana;	
+ font-size: medium;		
+ padding: 10px;
+ margin-right: -2px;	
+}	
+	
+#contacto
+{ 	
+ text-align: center;	
+ margin: 10px;		
+ padding: 10px;
+}	
+	
+#comentario	
+{	
+ margin: 5px;	
+}	
+
+#aceptar	
+{	
+ margin: 5px;	
+}	
+
+.instagram
+{	
+ height: 36px;	
+ width: 36px;	
+ float: right;	
+ margin: 10px;		
+}	
+
+.twitter	
+{	
+ height: 36px;	
+ width: 36px;	
+ float: right;	
+ margin:10px;		
+}	
+
+.facebook	
+{	
+ height: 36px;	
+ width: 36px;	
+ float: right;	
+ margin: 10px;		
+}
+	
+p 
+{ 	
+ text-align: center;	
+ margin:250px;	
+ padding: 10px;		
+
+}

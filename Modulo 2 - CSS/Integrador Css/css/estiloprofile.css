@@ -1,0 +1,66 @@
+div	
+{ 	
+  border-style: solid;		
+  border-color: #C70039;		
+  box-shadow: 1px 1px 1px;	
+  height: 465px;	
+  margin: 10px;	
+  padding: 30px;	
+  text-align: center;		
+  width: 255px;
+}
+.imgredonda	
+{				
+ border-radius:70px;		
+ box-shadow: 1px 1px 1px;	
+ border-style: solid;		 	
+ border:10px;	
+ height:120px;	
+ width:120px;	
+}	
+.argentina	
+{		
+ border-radius:25px;			 	
+ border:10px;	
+ height:30px;	
+ padding-left: -2px;		
+ width:30px;	
+ margin-left: -55px;			
+}  				
+h1	
+{	
+ color: #C0392B;	
+ font-weight: bold;	
+ font-size: large;	
+ font-family: sans-serif;	
+ font-style: "arial";	
+ margin: 15px;	
+}	
+h2	
+{	
+ color: #696969;	
+ font-weight: bold;
+ font-size: medium;	
+ font-family: sans-serif;	
+ font-style: "arial";		
+ margin: 10px;	
+ text-align: center;		
+}	
+p
+{	
+ color: #696969;	
+ font-size: smaller;	
+ font-weight: bold;	
+ font-family: sans-serif;	
+ font-style: "arial";		
+ margin: 18px;	
+ text-shadow: 1px;
+}	
+img 
+{	
+ align-items: center;	
+ height: 15px;	
+ width: 15px;	
+ margin: 10px;		
+ padding: 10px;
+}
