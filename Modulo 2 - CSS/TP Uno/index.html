@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilohome.css">	
+	<title>B&B Design</title>
+</head>
+<body>
+
+	 <p id="home">Home</p>	
+     <div class="container">
+	 <nav>
+		  <img src="C:\Users\Administrador.000\Desktop\tpUno\img\b&b.png" id="logo"> 
+		  <div class="btn-group">
+		  	
+		  	<button><a href="#">Home</a></button>
+		  	<button><a href="#">About Me</a></button>
+		  	<button><a href="#">Service</a></button>
+		  	<button><a href="#">Contact me</a></button>
+		 	
+		 </div>
+	 </nav>	
+	
+	 <header>
+		 
+	         <img  src="C:\Users\Administrador.000\Desktop\tpUno\img\4.jpg" id="foto">	
+	         <div class="about">
+	                          <h4>About us</h4>	
+	                          <p> En B&B Design nos ocupamos de que tu experiencia en diseño sea única. Contamos con un staff multidisciplinario con años de experiencia en el mercado. Clientes como Mercado Libre, IBM, Accenture, Globant y Exxon confian en nosotros desde hace más de 10 años.</p>	
+	         </div>	
+		
+	         <div class="redes">	
+
+	                           <img class="red" src="C:\Users\Administrador.000\Desktop\tpUno\img\git.png">	
+	                           <img class="red" src="C:\Users\Administrador.000\Desktop\tpUno\img\ln.png">	
+
+            </div>	
+    </header>	
+
+	<section>	
+
+	    <div class="slidessection">	
+
+		     <img class " slide " src="C:\Users\Administrador.000\Desktop\tpUno\img\6.jpg">	
+		     <img class " slide " src="C:\Users\Administrador.000\Desktop\tpUno\img\7.jpg">	
+		     <img class " slide " src="C:\Users\Administrador.000\Desktop\tpUno\img\8.jpg">	
+		     <img class " slide " src="C:\Users\Administrador.000\Desktop\tpUno\img\9.jpg">	
+		     <img class " slide " src="C:\Users\Administrador.000\Desktop\tpUno\img\10.jpg">	
+		     <img class " slide " src="C:\Users\Administrador.000\Desktop\tpUno\img\11.jpg">	
+		     
+	   </div>
+
+	</section>
+
+	<article class="cont">	
+			<div class="diseño">
+				<img src="C:\Users\Administrador.000\Desktop\tpUno\img\diseño2.jpg">
+				<h4>Diseño Gráfico</h4>
+				<p>Somos diseñadores y estamos especializados tanto en el desarrollo de proyectos de comunicación visual para su uso en formatos físicos como en entornos digitales.</p>
+			</div>
+			<div class="gigantografias">
+				<img src="C:\Users\Administrador.000\Desktop\tpUno\img\diseño.jpg">
+				<h4>Gigantografías</h4>
+				<p>Desarrollamos piezas y productos de tamaños especiales para señalética vial y decoración de grandes superficies, no solo ofreciendo la solución gráfica sino la resolución estructural y eléctrica.</p>
+			</div>
+			<div class= "impresiones">
+				<img src="C:\Users\Administrador.000\Desktop\tpUno\img\diseño2.jpg">
+				<h4>Impresiones</h4>
+				<p>Ofrecemos a nuestros clientes las siguientes opciones de impresión. Offset y Offset digital - Serigrafía - Ploteos en Vinilo, Tela, Papel - Impresión sobre Cama UV -Tampografía - Flexografía - Grabado Laser - Router CNC sobre materiales ferrosos y no ferrosos.</p>
+			</div>
+
+		     	
+    </article>
+	<!-- 70% -->
+	<footer>		
+
+	         <a href="contactme">contacto@mailito.com</a>		
+             		
+
+             <img class="red" src="C:\Users\Administrador.000\Desktop\tpUno\img\git.png">	
+
+	         <img class="red" src="C:\Users\Administrador.000\Desktop\tpUno\img\ln.png">	
+
+             <img class="red" src="C:\Users\Administrador.000\Desktop\tpUno\img\tw.png">
+
+
+   </footer>
+	
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500); 
+}
+</script>	
+</div>
+</body>
+</html>

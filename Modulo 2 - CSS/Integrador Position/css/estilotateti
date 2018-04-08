@@ -1,0 +1,37 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#container {
+	width:900px;
+	margin:0 auto;
+}
+
+.square {	
+	display:inline-block;
+	width:264px;
+	height:264px;
+	margin:5px;
+	text-align:center;
+}
+
+.x {
+	background-image: url(../img/Cross-256.png);
+}
+
+.o {
+	background-image: url(../img/o.png)
+}
+
+.red {
+	background-color: #fa5757;
+}
+
+.grey {
+	background-color: #eeeeee;
+}
