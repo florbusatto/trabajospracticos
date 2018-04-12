@@ -3,16 +3,34 @@
   padding: 0;	
 }
 body{	
-	 width: auto;	
+	 width: 0 auto;	
+}	
+h1{	
+   font-family: sans-serif;	
+   font-family: verdana;	
+   font-size: small;	
+   margin-top: 20px;	
+   margin-left: 20px;	
 }
 .container{
-	       width: 70%;	
-	       height: 850px;
-	       margin: 0 auto;	
-	       margin-top: 30px;	
-	       padding: 30px;	
+	       width: 80%;	
+	       height: 900px;
+	       margin: 20px;		
+	       padding: 40px;	
 	       border: solid 1px black;		
-}
+}	
+.cuadradorojo:hover:not(.active){
+                                 background-color: #ebebe0;	
+                                 opacity: 0.5;		
+                                 width: 264px;		
+                                 height: 264px;
+}				
+.cuadradogris:hover:not(.active){
+                                 background-color: #ff6666;	
+    							 opacity: 0.5;		
+    							 width: 264px;		
+    							 height: 264px;
+}						
 .cuadradorojo{	
 	          display:inline-block;	
 	          position: all;
@@ -31,21 +49,23 @@ body{
 	          background-color: #ebebe0;	
 }
 .cuadradogrisx{
-	           background-image: url(../img/Cross-256.png);	
-	           display:inline-block;
+	           display: inline-block;
 	           width: 264px;
 	           height: 264px;
-	           margin: 5px;
+	           margin: 5px;	
 	           text-align: center;	
 	           background-color: #ebebe0;	
 }
-
-.cuadradorojoo{
-	           background-image: url(../img/o.png);	
-	           display:inline-block;
-	           width: 264px;
-	           height: 264px;
-	           margin: 5px;
-	           text-align: center;	
-	           background-color: #ff6666;
+#cross{	
+      position: relative;		
+      width: 264px;
+	  height: 264px;
+	  margin: 0 auto;	
+	  text-align: center;	
+	  padding: 5px;		
+	  display: flex;	
+	  align-content: space-between;	
 }
+	
+
+
