@@ -2,107 +2,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css\estilohome.css">	
-	<title>B&B Design</title>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css\estilohome.css">			
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">	
+	<title>Star Wars World</title>
 </head>
-<body>
-
-	 <p id="home">Home</p>	
-     <div class="container">
-	 <nav>
-		  <img src="img\b&b.png" id="logo"> 
-		  <div class="btn-group">
-		  	
-		  	<button><a href="#">Home</a></button>
-		  	<button><a href="#">About Me</a></button>
-		  	<button><a href="#">Service</a></button>
-		  	<button><a href="#">Contact me</a></button>
-		 	
-		 </div>
-	 </nav>	
-	
-	 <header>
-		 
-	         <img  src="img\4.jpg" id="foto">	
-	         <div class="about">
-	                          <h4>About us</h4>	
-	                          <p> En B&B Design nos ocupamos de que tu experiencia en diseño sea única. Contamos con un staff multidisciplinario con años de experiencia en el mercado. Clientes como Mercado Libre, IBM, Accenture, Globant y Exxon confian en nosotros desde hace más de 10 años.</p>	
-	         </div>	
-		
-	         <div class="redes">	
-
-	                           <img class="red" src="img\git.png">	
-	                           <img class="red" src="img\ln.png">	
-
-            </div>	
-    </header>	
-
-	<section>	
-
-	    <div class="slidessection">	
-
-		     <img class " slide " src="img\6.jpg">	
-		     <img class " slide " src="img\7.jpg">	
-		     <img class " slide " src="img\8.jpg">	
-		     <img class " slide " src="img\9.jpg">	
-		     <img class " slide " src="img\10.jpg">	
-		     <img class " slide " src="img\11.jpg">	
-		     
-	   </div>
-
-	</section>
-
-	<article class="cont">	
-			<div class="diseño">
-				<img src="img\diseño2.jpg">
-				<h4>Diseño Gráfico</h4>
-				<p>Somos diseñadores y estamos especializados tanto en el desarrollo de proyectos de comunicación visual para su uso en formatos físicos como en entornos digitales.</p>
-			</div>
-			<div class="gigantografias">
-				<img src="img\diseño.jpg">
-				<h4>Gigantografías</h4>
-				<p>Desarrollamos piezas y productos de tamaños especiales para señalética vial y decoración de grandes superficies, no solo ofreciendo la solución gráfica sino la resolución estructural y eléctrica.</p>
-			</div>
-			<div class= "impresiones">
-				<img src="img\diseño2.jpg">
-				<h4>Impresiones</h4>
-				<p>Ofrecemos a nuestros clientes las siguientes opciones de impresión. Offset y Offset digital - Serigrafía - Ploteos en Vinilo, Tela, Papel - Impresión sobre Cama UV -Tampografía - Flexografía - Grabado Laser - Router CNC sobre materiales ferrosos y no ferrosos.</p>
-			</div>
-
-		     	
-    </article>
-	<!-- 70% -->
-	<footer>		
-
-	         <a href="contactme">contacto@mailito.com</a>		
-             		
-
-             <img class="red" src="img\git.png">	
-
-	         <img class="red" src="img\ln.png">	
-
-             <img class="red" src="img\tw.png">
-
-
-   </footer>
-	
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slide");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2500); 
-}
-</script>	
+<body> 				
+<!--Barra de Navegación Superior-->		
+<nav>
+   <img src="imagen\logo.png" alt="logo" id="logo"> 
+      <div class="navbar">	
+	     <ul>	
+         	<li><a href="#Home">Home</a></li>	
+         	<li><a href="#About">About</a></li>	
+	     	<li><a href="#Services">Services</a></li>
+         	<li><a href="#Contact">Contact</a></li>	
+	     </ul>
+      </div>
+</nav>		
+<!--Header-->	
+<header>
+   <img src="imagen\naves.jpg" alt="luke" id="foto">	
+      <div class="about">
+	     <h4>About us</h4>			
+	        <p> Star Wars is a science-fiction franchise comprising movies, books, comics, video games, toys, and animated shows. It is a fictional universe created by George Lucas. <br>	
+			The Star Wars story employs archetypal motifs common to science fiction, political climax and classical mythology, as well as musical motifs of those aspects.As one of the foremost examples of the space opera subgenre of science fiction, Star Wars has become part of mainstream popular culture, as well as being one of the highest-grossing series of all time. </p>	
+      </div>	
+   <div class="redes">
+      <h3>Follow us</h3>
+         <div class="icons">
+            <a href= "https://www.instagram.com/starwars/" target="_blank"><img class="SocialMedia" src="imagen/instagram.jpg" alt="instagram">
+            <a href="https://twitter.com/StarWarsLATAM" target="_blank"><img class="SocialMedia" src="imagen/twitter.png" alt="twitter">
+            <a href="https://www.facebook.com/StarWars.LATAM/?brand_redir=169299103121699" target="_blank"><img class="SocialMedia" src="imagen/facebook.png" alt="facebook">
+   </div>		
+         </div>
+</header>	
+<!--Galería de Imagenes-->
+<div class="galeria">	
+   <div class="slider">		 	
+      <img src="imagen/slides/slide1.jpg"  alt= "slide1" class="slide" >
+      <img src="imagen/slides/slide2.jpg"  alt= "slide2" class="slide" >
+      <img src="imagen/slides/slide3.jpg"  alt= "slide3" class="slide" >
+      <img src="imagen/slides/slide4.jpg"  alt= "slide4" class="slide" >
+      <img src="imagen/slides/slide5.jpg"  alt= "slide5" class="slide" >	
+      <img src="imagen/slides/slide6.jpg"  alt= "slide6" class="slide" >
+      <img src="imagen/slides/slide7.jpg"  alt= "slide7" class="slide" >
+      <img src="imagen/slides/slide8.jpg"  alt= "slide8" class="slide" >
+      <img src="imagen/slides/slide9.jpg"  alt= "slide9" class="slide" >
+      <img src="imagen/slides/slide10.jpg" alt= "slide10" class="slide" >
 </div>
+   </div>		
+<!--Section:Profile de Personajes-->
+<section>
+   <div class="contenedor">
+      <figure>
+         <img src="imagen/luke.jpg" alt="luke" class="imagen">	
+      </figure>
+         <div class="biopersonajes">			
+            <h1>Luke Skywalker</h1>					
+         </div>				
+      <figure>
+         <img src="imagen\yoda.jpg" alt="yoda" class="imagen">
+      </figure>
+         <div class="biopersonajes">			
+            <h1>Yoda</h1>		
+         </div>
+      <figure>
+         <img src="imagen/vader.jpg" class="imagen">	
+      </figure>
+         <div class="biopersonajes">		
+            <h1>Darth Vader</h1>		
+        </div>		
+    </div>
+  </section>	
+<!--Footer:Links a redes sociales y mail de contacto-->
+<footer>
+   <div class="RedesDos">
+      <a href="mailto:starwars@latam.com"><p id="mail"> starwars@latam.com</p></a> 
+         <div class="socialmedia"> 
+    	    <a href= "https://www.instagram.com/starwars/" target="_blank"><img class="iconos" src="imagen/instagram.jpg" alt="instagram">
+      		<a href="https://twitter.com/StarWarsLATAM" target="_blank"><img class="iconos" src="imagen/twitter.png" alt="twitter">
+      		<a href="https://www.facebook.com/StarWars.LATAM/?brand_redir=169299103121699" target="_blank"><img class="iconos" src="imagen/facebook.png" alt="facebook">
+   </div>	
+</footer>
+<!--Js links-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="js/main.js"></script>
 </body>
-</html>
+</html>	

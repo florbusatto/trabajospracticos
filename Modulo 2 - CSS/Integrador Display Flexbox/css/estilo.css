@@ -1,0 +1,15 @@
+	
+
+#imagenes{	
+display: flex;	
+justify-content: flex-start;	
+justify-content: center;}
+#harrypotter{	
+height: 150px;	
+width: 100px;	
+border-color: lightgrey;	
+}	
+#harrypotter2{	
+height: 150px;	
+width: 100px;	
+}

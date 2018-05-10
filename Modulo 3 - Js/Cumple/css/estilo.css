@@ -1,0 +1,76 @@
+*	
+{margin: 0 auto;	
+ box-sizing: border-box;	
+}		
+body{
+	background-image: url(../img/logo.png);
+}	
+.container
+{				
+ margin: 50px;	
+ padding: 50px;	
+ width: 800px;	
+ height: 400px;	
+ border:outset 3px;	
+ background-color: yellow;	
+
+}	
+.inputs{	
+ display: flex;	
+ justify-content: space-around;	
+}		
+h3{		
+ font-size: medium;	
+ font-weight: bold;	
+ font-family: sans-serif;	
+ font-family: verdana;
+ text-align: left;	
+ padding: 5px;	
+ margin: 25px;
+}	
+
+#ada		
+{ height: 36px;	
+  width: 36px;	
+  display: flex;	
+  justify-content: flex-start;	
+  border-radius: 28px;
+}
+#anakin
+{	
+ height: 150px;	
+ width: 150px;		
+ display: inline-block;
+ margin: 10px;		
+
+}	
+#vader	
+{	
+ height: 150px;	
+ width: 150px;		
+ display: inline-block;
+ margin: 10px;	
+	
+}	
+#obiwan
+{	
+ height: 150px;	
+ width: 150px;		
+ display: inline-block;
+ margin: 10px;	
+		
+}	
+#yoda
+{	
+ height: 150px;	
+ width: 150px;		
+ display: inline-block;
+ margin: 10px;	
+	
+}	
+
+#guardar{	
+		 margin: 50px;	
+		 padding: 15px;	
+
+}

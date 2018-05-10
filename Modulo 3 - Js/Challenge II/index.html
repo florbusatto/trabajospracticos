@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">	
+<meta charset="utf-8">	
+<link rel="stylesheet" type="text/css" href="css/estilo.css">	
+<head>
+	<title>Formulario de Inscripción</title>
+</head>
+<body>	
+	 <p id="untitled">Untitled Page</p>
+	 <form>	
+	 	   <div id="Datos Personales">
+	 	   <p>Formulario de Inscripción</p>	
+
+	       	<p>Nombre*</p>		
+            <p><input type="text" name="nombre"/>
+           	<p>Apellido*</p>	
+            <p><input type="text" name="apellido*"/>	
+           	<p>Fecha de Nacimiento*</p>	
+            <p><input type="text" name="fecha"/>				
+            </p>	
+           
+           <p>Número de Documento</p>	
+            <p><input type="text" name="número"/>				
+           </p>	
+            	
+         </div>
+           
+         <div id="Domicilio">	
+         <p>Calle</p>	
+           <p><input type="text" name="calle"/>				
+           </p>		
+         <p>Número</p>	
+           <p><input type="text" name="calle"/>				
+           </p>	
+         <p>Piso</p>	
+           <p><input type="text" name="calle"/>				
+           </p>	
+          <p>Dpto</p>	
+           <p><input type="text" name="calle"/>				
+          </p>	
+          
+        </div>	
+        <div id="genero"></div>
+	      <legend>Genero</legend> 	
+            <input type="radio" name="Genero" value="Femenino" id="Femenino"/><label for="Genero">Femenino</label></br>
+            <input type="radio" name="Genero" value="Masculino" id="Masculino"/><label for="Genero">Masculino</label></br>		
+        </div>	
+        <div id="Temas">
+           <p>Temas que le interesan</p>	
+            <input type="checkbox" name="Fútbol" id="Fútbol"/>
+             <label for="Fútbol">Fútbol</label><br />
+	        <input type="checkbox" name="Equitación" id="Equitación" /> 
+	         <label for="Equitación">Equitación</label><br />
+	        <input type="checkbox" name="Golf" id="Golf" /> 
+	        <label for="Golf">Golf</label><br>
+            <br>		
+        </div>	
+        <div id="Peso">	
+         <p>Altura</p>		
+            <p><input type="text" name="Altura"/>
+         <p>Peso</p>	
+            <p><input type="text" name="Peso"/>		
+        </div>	
+        <div id="Contacto">
+         <p>Télefono</p>	
+           <p><input type="text" name="Télefono"/>				
+         <p>E-mail</p>	
+          <p><input type="text" name="E-mail"/>		
+        </div>	
+        <div id="Observaciones">	
+
+        <p>Observaciones</p>	
+
+        <form action="textarea" method="post">	
+     	                                    
+     	 <textarea rows="4" cols="50" id="box"></textarea>
+            	
+	     <input type="button" name="Enviar" value="Enviar" /> 
+	    <br>	
+	    </div>	
+	</form>			
+
+</body>
+</html>

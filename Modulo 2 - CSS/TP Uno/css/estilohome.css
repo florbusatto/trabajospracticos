@@ -1,132 +1,252 @@
 * {
-  font-family: helvetica;	
-  padding: auto;	
+  padding: 0 auto;  
+  margin: 0 auto;	  
+  width: auto;  
+}	  
+body {   
+     background-image: url(../imagen/fondo.png);   
+     height: auto;   
+     width: auto; 
+     margin:5px;    
+     padding: 5px;  
 }		
-
-.container {	
-  border: solid 1px black;		
-  padding: 0 auto;	
-  margin: 0 auto;	
-  width: 1800px;
-
-}	
-#home{	
-  font-weight: bold;	
-  font-family: sans-serif;	
-  text-align: left;	
-}																
-nav {
-  display: flex;
-  margin: 10px;
-  height: 80px;	
-  border: transparent;
-  width: auto;	
-  background-color: lightgrey;
-}	
+/*Barra de Navegación Superior:Contiene logo,imagen de background y pestañas de navegación.*/											
+.navbar {
+      display: block;    
+      height: 80px; 	
+      width: auto;	
+      background-image: url(../imagen/logoamarillo.jpg);  
+      opacity: 0.5; 
+      background-position: center;  
+      background-repeat: no-repeat;   
+      background-size: 100px; 
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 5px;
+      overflow: hidden; 
+}	    
+li {   
+    position: relative;     
+    float: right;        
+}   
+nav ul li a {  
+             text-decoration:none;
+             list-style:none;  
+             color:white;  
+             font-family: verdana; 
+             font-family: sans-serif;
+             font-size:medium; 
+             font-weight: bolder;
+             padding:10px;  
+             margin: 0 auto;    
+}
+nav ul li a:hover {
+                  background-color:#202020;
+                  border-radius: 3px;     
+}
 #logo {
-  width: 70px;
-  height: 70px;	
-  border-radius: 45px;	
-  float: left;	
-  margin: 5px;	
-  display: flex;
+       width: 70px;
+       height: 70px;	  
+       border-radius: 45px;
+       float: left;	
+       margin: 0 auto;	  
+       padding: 5px;
 }	
-a {
-  text-decoration: none;
-  color: lightgrey;	
-}	
-.btn-group {
-  display: flex;
-  width: 100%;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-}
-.btn-group button {
-  background-color: #FFFFFF;
-  border: none;
-  color: black;
-  padding: 5px 30px;
-  cursor: pointer;
-}
-.btn-group button:hover {
-  background-color: #676C68;
-}	
+/* Header: Contiene Imagen de la web,titulo y descripción: About us - Links a redes*/
 header {
-  width: auto;
-  height: 200px;
-  display: flex;
-  margin: 10px;
-  border: transparent;	
-  background-color: lightgrey;
+        width: auto;
+        height: auto;
+        display: flex;  
+        align-content: center;
+        margin: 5px;  
+        padding: 5px;
+        border: transparent;	
+        background-color: #101010;
 }	
-.foto {
-  width: 100px;
-  height: 100px;	
-}	
+#foto {
+       width: 100px;
+       height: 100px;   
+       margin: 10px;
+       padding: 10px;             
+}
 h4 {	
- font-weight: bold;	
- font-family: sans-serif;	
- margin-top: 3px;
+    font-weight: bold;	
+    font-family: sans-serif;	  
+    font-family: helvetica;
+    margin: 10px;  
+    padding: 5px;
+    font-size: medium;    
+    color: white;
+} 
+p {  
+  font-family: sans-serif;    
+  font-family: helvetica;
+  margin: 10px;   
+  padding: 10px; 
+  font-size: medium;   
+  text-shadow: 3px yellow; 
+  text-align: justify;  
+  color: yellow;    
+  display: inline-block;
+} 
+h3 {
+    text-align: center;
+    font-family: sans-serif;    
+    font-family: helvetica;
+    font-size:medium;
+    color: white;   
+    text-shadow: 1px 1px 1px;
+    padding: 10px;
 }
-p{
-  width: 600px;
-  font-size: 15px;	
-  font-family: sans-serif;	
-  margin: 5px;	
-  text-align: center;	
-}			
 .redes {
-  display: flex;
-  width: 100%;	
-  height: 36px;
-  justify-content: flex-end;
-  margin-top: 120px;	
-  margin-left: 0px;	
-  padding: 5px;
-}	
-.red {
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  width: 36px;
-  height: 36px;
-  margin: 15px;
-}	
-section { 	
-    border:transparent;	
-    background-color: lightgrey;	
-    margin:10px;	
-     }
-.slidessection {	
-  max-width: 500px;		
-  margin:10px;	
+       padding: 5px;
+       display:flex;     
+       flex-direction: column;
+       align-self: flex-end;    
 }
-.slide	
-{
- display: none;	
- width: 100%;
-}	
-
-.cont{
-  width: auto;
-  margin: 10px;	
-  display: inline-flex;	
-  margin: 10px;	
-  padding: 10px;
-}	
-.diseño{	
- width: 600px;	
- border: transparent;	
- background-color: lightgrey;		
- margin:10px;
-}	
-img .diseño{	
-width: 150px;	
-height: 150px;	
-margin-top: 5px;}
-footer {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
+.icons {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;  
 }
+.SocialMedia {
+             margin: 5px;  
+             padding: 5px;
+             height: 36px; 
+             width: 36px;  
+             border-radius: 28px;    
+}
+/* Imagenes Slider*/
+.galeria { 
+        margin: 0 auto;
+        align-content: center;  
+        padding: 20px;  
+}
+.slide {      
+/*Mejorar la calidad de las imagenes*/
+          padding: 0 auto;  
+          margin: 0 auto; 
+          width: 1480px;  
+          height: 340px;  
+          background-attachment: fixed; 
+          background-position: center;  
+          opacity: 1.5;  
+}
+/*Presentación de Personajes*/
+section {
+          display: flex;  
+          flex-direction: row;
+          padding: 10px;    
+          margin: 0 auto;
+          text-align: center;   
+          width: 1280px;    
+          height: auto;
+}
+.contenedor {   
+              display: flex;  
+              flex-direction: row;       
+              padding: 10px;      
+              width: 1280px;  
+              margin: 0 auto;   
+}
+.biopersonajes {
+                display: inline-flex;    
+                text-decoration: none;    
+                width: 1280px;
+}
+.contenedor:hover .imagen{
+                          transform: scale(1.15);
+}
+.contenedor:hover {
+                    background-color: #303030;
+} 
+.imagen {
+          transition: all 0.7s;
+          width: 150px;   
+          height: 150px;
+          margin: 15px; 
+          display: inline-flex;  
+          align-content: center;  
+          padding: 15px;
+}
+h1 {
+    font-family: sans-serif;  
+    font-family: verdana;
+    color: white;  
+    text-decoration: none;    
+    text-align: left;   
+    font-size: medium;  
+    margin:15px;  
+    padding: 15px;
+}   
+/*Footer*/  
+.RedesDos { 
+            display: flex;  
+            justify-content: space-between; 
+            height: 100px;  
+            padding: 10px;  
+            margin: 15px;
+            background-image: url(../imagen/vaderfooter.jpg); 
+            background-size: medium;  
+            background-repeat: no-repeat; 
+            background-position: center;  
+            opacity: 0.5; 
 
+}
+.iconos {
+          height: 36px; 
+          width: 36px;  
+          border-radius: 28px;  
+          margin:5px;  
+          padding: 10px;      
+          float: right;   
+}
+#mail {
+       padding: 10px;
+       color: yellow;     
+       float: left; 
+}              
+/*Media queries*/
+@media (max-width: 450px){
+  
+  header {
+         width: 100%;
+  }
 
+  #logo {
+        display: none;
+  }
+  nav ul {
+         display: flex;
+         flex-direction: row;
+  }
+  nav ul li a{
+              padding: 0 auto;
+             
+  }
+  section {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+  }
+  .contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  figure { 
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+  }
+  .contenedor-imagen {
+                     transition:  all 0.5s;
+                     width: 200px;
+                     margin: 10px;
+  }
+  .RedesDos {
+             display: flex;
+             justify-content: center;
+             flex-direction: column;
+  }
+  }
