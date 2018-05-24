@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">	
-<meta charset="utf-8">	
-<link rel="stylesheet" type="text/css" href="css/estilo.css">	
-<head>
-	<title>Formulario de Inscripción</title>
+<head>  
+     <meta charset="utf-8">  
+     <title>Formulario de Inscripción</title> 
+     <link rel="stylesheet" type="text/css" href="css/estilo.css"> 
 </head>
-<body>	
-	 <p id="untitled">Untitled Page</p>
-	 <form>	
+<body>  
+    <div id="container">	
+	     <p>Untitled Page</p>
+	  <form>	
 	 	   <div id="Datos Personales">
-	 	   <p>Formulario de Inscripción</p>	
-
-	       	<p>Nombre*</p>		
-            <p><input type="text" name="nombre"/>
-           	<p>Apellido*</p>	
-            <p><input type="text" name="apellido*"/>	
-           	<p>Fecha de Nacimiento*</p>	
-            <p><input type="text" name="fecha"/>				
-            </p>	
-           
-           <p>Número de Documento</p>	
-            <p><input type="text" name="número"/>				
-           </p>	
-            	
-         </div>
-           
-         <div id="Domicilio">	
-         <p>Calle</p>	
-           <p><input type="text" name="calle"/>				
-           </p>		
-         <p>Número</p>	
-           <p><input type="text" name="calle"/>				
-           </p>	
-         <p>Piso</p>	
-           <p><input type="text" name="calle"/>				
-           </p>	
-          <p>Dpto</p>	
-           <p><input type="text" name="calle"/>				
-          </p>	
+	 	      <p>Formulario de Inscripción</p>	  
+       <div class="DatosObligatorios">
+            <label>Nombre</label>		
+            <input type="text" name="nombre" id="nombre"> 
+            <label class="error obLabel">*</label> 
+       </div> 
+       <div class="DatosObligatorios">
+           	<label>Apellido</label>
+            <input type="text" name="apellido" id="apellido"> 
+            <label class="error obLabel">*</label>
+       </div> 
+       <div class="DatosObligatorios">	
+           	<label>Nacionalidad</label>	
+            <select id="Nacionalidad">  
+            <option value="-1">Seleccione un país</option>
+            </select>				
+       </div>   
+       <div class="DatosObligatorios">
+            <label>Fecha de Nacimiento</label>
+            <input type="text" name="Nacimiento" id="Nacimiento"> 
+            <label class="error obLabel">*</label>
+       </div>   
+       <div class="DatosObligatorios">
+            <label>Tipo de Documento</label>
+            <select id="Documento">   
+            </select>
+       </div> 
+       <div class="DatosObligatorios">
+           <label>Número de Documento</label>	
+           <input type="text" name="número" id= "NumDoc">  
+           <label class="error obLabel">*</label>				
+       </div>
+       <div class="Domicilio">	
+            <label>Calle</label>
+            <input type="text" name="calle" id="calle">   
+            <label class="error obLabel">*</label>				
+       </div>	    
+       <div class="Domicilio">	
+            <label>Número</label>
+            <input type="text" name="número" id="NumCalle">				
+       </div>   
+       <div class="Domicilio">
+            <label>Piso</label>	
+            <input type="text" name="piso" id="piso">				
+       </div>   
+       <div class="Domicilio">
+            <label>Dpto</label> 
+            <input type="text" name="Dpto" id="Dpto">       
+       </div>   
+       <div class="Provincia">    
+          <label>Provincia</label>   
+          <select id="provincias">
           
-        </div>	
+          </select>    
+       </div>	
         <div id="genero"></div>
 	      <legend>Genero</legend> 	
             <input type="radio" name="Genero" value="Femenino" id="Femenino"/><label for="Genero">Femenino</label></br>
@@ -68,17 +93,16 @@
           <p><input type="text" name="E-mail"/>		
         </div>	
         <div id="Observaciones">	
-
-        <p>Observaciones</p>	
-
-        <form action="textarea" method="post">	
-     	                                    
-     	 <textarea rows="4" cols="50" id="box"></textarea>
-            	
-	     <input type="button" name="Enviar" value="Enviar" /> 
-	    <br>	
-	    </div>	
-	</form>			
-
+          <p>Observaciones</p>	
+          <form action="textarea" method="post">	
+     	    <textarea rows="4" cols="50" id="box"></textarea>  
+          </form>   
+        </div>   
+        <div id="button">
+           <button type="button" name="Enviar" value="Enviar">Enviar</button>     
+           <button type="reset" id="limpiar">Limpiar</button>
+	      </div>		
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
