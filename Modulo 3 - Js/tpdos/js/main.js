@@ -55,9 +55,6 @@ ficha.appendChild(back);
     
 });
 
-/*
- */
- 
 var match = function match() {
     var matched = document.querySelectorAll('.matched');
     matched.forEach(function (ficha) {

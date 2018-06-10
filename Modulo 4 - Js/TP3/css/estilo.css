@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box; } 
+
+/*Estilo página Home*/
+
+#background {  
+    margin: 0 auto;   
+    width: 20%;    
+    height: 320px;
+    background-image: url(../img/wallpaper.jpg);  
+    background-repeat: no-repeat; 
+    background-size: all;
+    background-position: center;
+}   
+.nombre {   
+    font-size: large;  
+    font-family: serif;
+    font-family: ' Roboto';
+    color: white; 
+    text-decoration: none; 
+
+}      
+button {
+    margin-top: 300px;    
+    margin-left: 40px; 
+    width: 6.5em;    
+    height: 4.5em;  
+    border: 2px solid red;  
+    background-color: red; 
+    border-radius: 6px;     
+    opacity: 0.7;
+    font-size: larger;  
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;     
+}     
+button:hover {
+    background-color: orange;   
+}   
+button a:link {
+    text-decoration: none;
+}
+button a:visited {
+    text-decoration: none;
+} 
+button h1 {     
+    font-size: large;  
+    font-family: serif;
+    font-family: ' Roboto';
+    color: white; 
+    text-decoration: none;  
+}   
+
+/*Estilo Niveluno*/
+
+ body{
+  width: all;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;  
+  background-image: url(../img/wallpapermemo.jpg);    
+  background-repeat: no-repeat; 
+  background-position: all;
+  opacity: 0.8; 
+} 
+audio {          
+    margin-top: 20px;  
+    width: 80px;     
+}   
+.container {
+  margin: 5px; 
+  width: 30%;
+} 
+img{   
+   margin-top: 25px;  
+   padding: 10px;
+}
+.instruccionesJuego {
+  font-family: 'Roboto, Poiret+one, verdana, arial';
+  width: 50%;
+  margin: 5px;
+  padding: 15px;
+  color: red;
+}
+h3 {    
+   margin: 5px;|
+   padding: 20px;
+   font-family: 'Roboto, Poiret+one, verdana, arial';
+   font-size: x-large; 
+   color: red;  
+   text-align: left;
+}   
+ul li {   
+  float: left; 
+  font-family:'Roboto, Poiret+one, verdana, arial';  
+  font-weight: bold;   
+  padding: 15px;  
+  margin: 5px;  
+  width: 120%;
+  color: #eefdff; 
+  font-size: large; 
+  border: 2px solid #e51932;  
+  border-radius: 8px; 
+  background-color: #e51932;  
+  opacity: 0.8;
+} 
+#intentos {   
+  margin: 40px; 
+  padding: 15px;  
+  width: 200px;
+  float: left;  
+  font-size: large; 
+  font-family: verdana; 
+  font-weight: bold;  
+  color: #eefdff;   
+  border: solid 2px red;
+  border-radius: 8px; 
+  background-color: #e51932;  
+  opacity: 0.8;
+}
+.grilla {
+  max-width: 670px;
+  margin: 150px; 
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.ficha {
+  position: relative;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+.ficha, .back, .front {
+  height: 120px;
+  width: 120px;
+}
+.back, .front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;  
+  backface-visibility: hidden;
+}
+.front {
+  border: 3px solid #e51932;
+  background: #e51932;
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  border: 3px solid #e51932;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.matched {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.match .front {
+  background: url('../img/logocartas.png'); 
+  background-repeat: no-repeat; 
+  background-size: all; 
+  background-position: center;  
+  background-color: red;
+}   
+#volver , #leveldos{    
+   -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s; 
+    margin: 20px;   
+    width: 4.0em;    
+    height: 3.0em;  
+    border: 2px solid red;  
+    background-color: #e51932; 
+    border-radius: 6px;     
+    opacity: 0.8;
+    font-size: 12px;  
+    color: #e51932;   
+    display: flex;  
+    flex-wrap: wrap; 
+}
+
+/*
+@media (min-width: 768px) and (max-width: 1199px) { 
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .instruccionesJuego {
+    width: 100%;
+ }
+ .grilla {  
+   width: 100%; 
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+ }
+
+ .ficha, .back, .front {
+  height: 30px;
+  width: 30px;
+}
+
+
+@media (max-width: 767px){
+  body {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .instruccionesJuego {
+     width: 20%;
+  }
+
+  .ficha, .back, .front {
+    height: 30px;
+    width: 30px;
+  }
+} 
+@media (max-width: 480px){ 
+
+  body {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .instruccionesJuego {
+     width: 20%;
+  }
+
+  .ficha, .back, .front {
+    height: 20px;
+    width: 20px;
+  } 
+}
