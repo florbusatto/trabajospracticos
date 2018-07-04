@@ -109,8 +109,8 @@ if (ficha1 && ficha2) {
 }   
         
 if (contador!=2){
-  intentos++
-  mostrarIntentos.innerHTML = ( maxIntentos + intentos)     
+  intentos--
+  mostrarIntentos.innerHTML = (maxIntentos - intentos)     
 }
 
 if (ficha1===ficha2){
@@ -120,5 +120,8 @@ if (finjuego.length == 10) {
     setTimeout (function() {location.reload(); }, 3500);    
     }
 }   
-
+if (finjuego.length != 10 && intentos > 8 ){
+    setTimeout (function(){ alert("You lose!"); }, 1000)
+    setTimeout (function() {location.reload(); }, 1500); 
+    }
 }); 

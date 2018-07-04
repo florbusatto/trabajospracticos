@@ -1,0 +1,70 @@
+*{
+	box-sizing: border-box;	
+	margin: 0 auto;
+}	
+body {
+	background-color: black;
+}		
+.mainContainer {
+	margin: 0 auto;	
+	margin-top: 10px;			
+	width: 80%;	
+}
+.grandes .col {
+	height:350px;	
+}
+.chicas .col {
+	height:40px;	
+}
+.gradient {
+	background:linear-gradient(to right, white, white 10%, black);
+	background-position: 0 15px;	
+}
+.blanca {
+	background-color: white;
+}
+.amarilla {
+	background-color: yellow;
+}
+.cyan {
+	background-color: cyan;
+}
+.verde {
+	background-color: lime;
+}
+.magenta {
+	background-color: magenta;
+}
+.roja {
+	background-color: red;
+}
+.azul {
+	background-color: blue;
+}
+.negra {
+	background-color: black;
+}
+.gris1 {
+	background-color: #333333;
+}
+.gris2 {
+	background-color: #444444;
+}
+.gris3 {
+	background-color: #555555;
+}
+.gris4 {
+	background-color: #666666;	
+}
+.gris5 {
+	background-color: #aaaaaa;
+}
+.gris6 {
+	background-color: #bbbbbb;	
+}
+.gris7 {
+	background-color: #cccccc;	
+}
+.gris8 {
+	background-color: #dddddd;	
+}

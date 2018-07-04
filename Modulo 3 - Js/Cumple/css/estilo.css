@@ -28,7 +28,6 @@ h3{
  padding: 5px;	
  margin: 25px;
 }	
-
 #ada		
 { height: 36px;	
   width: 36px;	
@@ -36,41 +35,20 @@ h3{
   justify-content: flex-start;	
   border-radius: 28px;
 }
-#anakin
-{	
- height: 150px;	
- width: 150px;		
- display: inline-block;
- margin: 10px;		
-
+img {	
+    height: 150px;	
+    width: 150px;		
+    display: inline-block;
+   margin: 10px;		
 }	
-#vader	
-{	
- height: 150px;	
- width: 150px;		
- display: inline-block;
- margin: 10px;	
-	
-}	
-#obiwan
-{	
- height: 150px;	
- width: 150px;		
- display: inline-block;
- margin: 10px;	
-		
-}	
-#yoda
-{	
- height: 150px;	
- width: 150px;		
- display: inline-block;
- margin: 10px;	
-	
-}	
-
 #guardar{	
 		 margin: 50px;	
-		 padding: 15px;	
+		 padding: 15px;		
+		 border-radius: 8px;
+}
+button #guardar{	
+		 margin: 50px;	
+		 padding: 15px;		
+		 border-radius: 8px;
 
 }

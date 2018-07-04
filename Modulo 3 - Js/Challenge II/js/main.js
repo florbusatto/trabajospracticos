@@ -1,46 +1,42 @@
-// Variables globales
-var paises = ["Argentina", "Uruguay", "Chile", "Bolivia", "Paraguay", "Brasil"];
-var provincias = ["CABA","Bs As","Cordoba"];
-var ciudades = [{"nombre":"Bahía Blanca", "provincia":1}, {"nombre":"Villa Crespo", "provincia":0}, {"nombre":"Chivilcoy","provincia":1}, {"nombre":"Villa María", "provincia":2}];
-
+var paises = ["Argentina","Brasil","Chile","Paraguay","Uruguay",];
+var provincias = ["CABA","Bs As","Chubut"];
+var ciudades = [{"nombre":"Caballito", "provincia":0}, {"nombre":"Tandil", "provincia":1}, {"nombre":"San Martín de los Andes", "provincia":2}];
 var documentoTipo = ["DNI", "LE", "LC"];
-
-var btnEnviar = document.getElementById("enviar"); //botón enviar
-var btnLimpiar = document.getElementById("limpiar"); //botón limpiar
-
-var comboProv = document.getElementById("provs"); //campo "provincia". Esta variable es global para que funcione el event listener de abajo
+var botonEnviar = document.getElementById("enviar"); 
+var botonLimpiar = document.getElementById("limpiar"); 
+var comboBoxProv = document.getElementById("provincias"); 
 
 function cargarDocumentoTipo() {
-	var comboDoc = document.getElementById("documento-tipo");
-	for (i = 0; i < documentoTipo.length; i++) {
+	var comboBoxDoc = document.getElementById("tipoDoc");
+	for (i = 0; i < tipoDoc.length; i++) {
 		var op = document.createElement("option");
 		op.value = i;
-		op.innerHTML = documentoTipo[i];
-		comboDoc.appendChild(op);
+		op.innerHTML = tipoDoc[i];
+		comboBoxDoc.appendChild(op);
 	}
 }
 
 function cargarPaises() {
-	var comboPais = document.getElementById("nacionalidad");
+	var comboBoxPais = document.getElementById("nacionalidad");
 	paises.forEach(function(e) {
 		var op = document.createElement("option");
 		op.value = i;
 		op.innerHTML = e;
-		comboPais.appendChild(op);
+		comboBoxPais.appendChild(op);
 	})
 }
 
 function cargarProvincias() {
 	for (i = 0; i < provincias.length; i++) {
-		var op = document.createElement("option"); //crea opciones dentro de la caja de select
-		op.value = i; //asigna un valor a cada opción
-		op.innerHTML = provincias[i]; //asigna una provincia (del array)
-		comboProv.appendChild(op); //agrega la opción a la caja select
+		var op = document.createElement("option"); //Crea opciones dentro de la caja desplegable de select.
+		op.value = i; //Asigna un valor a cada opción.
+		op.innerHTML = provincias[i]; //Asigna una provincia (del array provincias).
+		comboBoxProv.appendChild(op); //Agrega la opción PROVINCIA a la caja select.
 	}
 }
 
 function cargarCiudades() {
-	var provId = comboProv.value; //valor seleccionado del campo "provincia"
+	var provId = comboBoxProv.value; //Valor seleccionado del campo "provincia"
 	var cityField = document.getElementById("cityField"); // contenedor
 	var comboCity = document.getElementById("citySelect"); //campo "ciudad"
 	comboCity.innerHTML = ""; //borra las opciones que estaban de antes para cuando se elige una ciudad nueva
@@ -56,14 +52,13 @@ function cargarCiudades() {
 	cityField.classList.remove("hidden");
 }
 
-// Validaciones
 function validarEdad(edad) {
-	var anioActual = 2018;
-	var anioNacimiento = parseInt(document.querySelector('input[type="date"]').value.slice(0,4));	// agarra el valor del input y extrae los primeros 4 caracteres (el año)
-	if ((anioActual - anioNacimiento) < 18) {
-		var menorEdad = document.getElementById("menorEdad"); // mensaje de error
+	var actual = 2018;
+	var anioNac = parseInt(document.querySelector('input[type="date"]').value.slice(0,4));// Toma el valor del input y extrae los primeros 4 caracteres (el año)
+	if ((actual - anioNac) < 18) {
+		var menorEdad = document.getElementById("menorEdad"); 
 		menorEdad.style.visibility = "visible";
-		menorEdad.textContent = "Debes ser mayor de edad";
+		menorEdad.textContent = "Debes ser mayor de 18 años";
 	}
 }
 
@@ -77,40 +72,36 @@ function validarTel(tel) {
 
 function validarMail(mail) {
 	var mail = document.getElementById("email").value;
-	if (mail.length != 0 && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail)) { // si no está vacío pero la regex no matchea (el test da false)
-		var emailError = document.getElementById("emailError");//busco el contenedor del mensaje de error de email
+	if (mail.length != 0 && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail)) { 
+		var emailError = document.getElementById("emailError");
 		emailError.style.visibility = "visible";
-		emailError.innerHTML = "Formato no válido" //y le pongo el mensaje de error
+		emailError.innerHTML = "Formato no válido" 
 	}
 }
 
 function validarFormulario() {
 	checkEmptyFields()
 
-
-	// if (validarMail() && validarTel() && validarEdad()) {
-	// 	alert("yay");
-	// }
 }
 
 function checkEmptyFields() {
-	var obligatorios = document.querySelectorAll(".obligatorio input, .obligatorio select"); //junta todos los inputs hijos de campos con clase "obligatorio"
+	var obligatorios = document.querySelectorAll(".Obligatorio input, .Obligatorio select"); //junta todos los inputs hijos de campos con clase "obligatorio"
 
-		for (var i = 0; i < obligatorios.length; i++) {//recorro los campos obligatorios
-			var campoObligatorio = obligatorios[i];
-			if (campoObligatorio.type == "text" || campoObligatorio.type == "date") {//busco valor de inputs text y date
-				if (campoObligatorio.value.length == 0) {//si está vacío
-					showObError(campoObligatorio);//muestro error
+		for (var i = 0; i < obligatorios.length; i++) {
+			var campo_Obligatorio = obligatorios[i];
+			if (campo_Obligatorio.type == "text" || campo_Obligatorio.type == "date") {//busco valor de inputs text y date
+				if (campo_Obligatorio.value.length == 0) {
+					showerror(campo_Obligatorio);
 				}
 			}
 
-			else if (campoObligatorio.tagName == "SELECT") {
-				if (campoObligatorio.value < 0) {
-					showObError(campoObligatorio);
+			else if (campo_Obligatorio.tagName == "SELECT") {
+				if (campo_Obligatorio.value < 0) {
+					showerror(campo_Obligatorio);
 				}
 			}	
 
-			function showObError(element) {
+			function showerror(element) {
 				var label = element.nextElementSibling; // busco el elemento que le sigue al input (la error label)
 				label.style.visibility = "visible"; //muestro la label
 			}
@@ -121,11 +112,11 @@ cargarDocumentoTipo();
 cargarProvincias();
 cargarPaises();
 
-comboProv.addEventListener('change',cargarCiudades); // cuando se eligió una provincia, carga las posibles ciudades
-btnEnviar.addEventListener("click", checkEmptyFields);
-btnLimpiar.addEventListener("click", function(e) { //función extra del botón reset
+comboBoxProv.addEventListener('change',cargarCiudades); // cuando se eligió una provincia, carga las posibles ciudades.
+botonEnviar.addEventListener("click", checkEmptyFields);
+botonLimpiar.addEventListener("click", function(e) { //función extra del botón reset
 	e.preventDefault();
-	var errorMsgs = Array.from(document.getElementsByClassName("error")); //esconde todos los mensajes de error
+	var errorMsgs = Array.from(document.getElementsByClassName("error")); //Esconde los mensajes de error.
 	errorMsgs.forEach(function(msg) {
 		msg.style.visibility = "hidden";
 	});

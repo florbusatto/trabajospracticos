@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;	
+	margin: 0 auto;
+	padding: 0 auto;
+}
+body {		
+	margin: 15px;	
+	background-image: url("../img/food.jpg");	
+	opacity: 0.9;	
+}		
+#mainContainer {	
+	border: solid 1px;	
+	border-radius: 8px;
+	width:80%;	
+	height: 500px;
+	margin: 0 auto;
+	padding:20px;	
+	background-color: #8ad383;	
+}	
+form {
+	margin:10px;
+}
+select, p {
+	font-family: "arial";	
+	margin:3px;
+}
+p {
+	font-weight: bold;
+}
+#menu {
+	float:left;
+}
+h1, h2{	
+	font-size: large;	
+	font-family: "arial";
+	margin: 0 auto;
+	color:black;
+}
+button {
+	display:block;
+	margin:5px;
+	padding: 2px 5px;	
+	border-radius: 4px;
+}
+#ticket {
+	width: 40%;
+	height:200px;
+	float: right;
+	margin:10px;
+	padding:10px;
+	background-color: #fceeac;	
+	border-radius: 8px;
+}
+ul {
+	margin-top:15px;	
+	font-family: "arial";
+	list-style-position: inside;
+}

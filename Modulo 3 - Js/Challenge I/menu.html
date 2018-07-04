@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">	
+<head>  
+  <meta charset="utf-8">  
+  <title>Menu</title> 
+  <link rel="stylesheet" type="text/css" href="css/estilo.css"> 	
+</head>
+<body>
+  <div id="mainContainer">
+    <div id="menu">
+      <h1 class="titulo">Elige tu mejor opción de almuerzo</h1>
+    <form action="submit" id="formulario">
+      <p>Plato Principal</p>
+       <select id="opcion_principal"></select>
+      <p>Guarniciòn</p>
+       <select id="opcion_guarnicion"></select>
+      <p>Postre</p>
+       <select id="opcion_postre"></select>
+      
+       <button type="button" id="confirmar" onclick="Ticket()">Confirmar</button>
+    </form>
+    </div>
+
+    <div id="ticket">
+      <h2>Tu almuerzo:</h3>
+      <ul id="items"></div>
+    </div>
+
+  </div>
+
+<script type="text/javascript" src="js/menu.js"></script>
+
+</body>
+</html>

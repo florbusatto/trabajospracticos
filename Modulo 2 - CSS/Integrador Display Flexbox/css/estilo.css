@@ -1,15 +1,83 @@
-	
-
-#imagenes{	
-display: flex;	
-justify-content: flex-start;	
-justify-content: center;}
-#harrypotter{	
-height: 150px;	
-width: 100px;	
-border-color: lightgrey;	
+* {
+	margin:0 auto;
+	padding:0 auto;
+	box-sizing: border-box;
+}
+body {
+	font-family: arial;
+	width:100%;
+	padding:0 20px;	
+	border: solid black 1px;	
+	background-image: url("../img/wallpaper.jpg");		
+	opacity: 0.8;
 }	
-#harrypotter2{	
-height: 150px;	
-width: 100px;	
+#navbar{
+	text-decoration: none;	
+	width: 100%;	
+	height: 100px;	
+	border: grey 1px;	
+	padding: 10px;	
+	margin: 5px;	
+	background-color: #e8ebef;
+}	
+#logo{
+	 width: 40px;	
+	 height: 40px;	
+	 border-radius: 30px;
+}		
+li {
+	display:inline;
+}	
+li a {
+	text-decoration: none;
+	color:black;	
+	font-family: arial;	
+	font-weight: bold;	
+	display:inline;
+}	
+#buscar, #button{
+	float: right;
+}	
+.libros {
+	background-color:#e8ebef;
+	width:320px;
+	padding:15px;	
+	margin: 3px;
+}	
+figcaption h1 {
+	font-size:14px;	
+	font-family: arial;		
+	text-align: center;		
+	margin-top: 2px;	
+}
+figcaption p {
+	font-size:12px;	
+	font-family: arial;	
+	padding: 3px;	
+	text-align: justify;	
+	margin-top: 2px;
+}
+figure img {
+	max-width:100%;
+}
+#camara, #caliz, #fenix , #principe, #legado{
+	width: 100%;	
+	height: 460px;
+}
+button {
+	width:80px;
+	padding:0 10px;
+}	
+.libros button {
+	display:block;
+	margin:0 auto;	
+	float: left;	
+	border-radius: 4px;	
+	margin-top: 5px;
+}
+.row {
+	margin-bottom:20px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
 }

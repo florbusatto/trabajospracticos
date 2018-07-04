@@ -5,7 +5,7 @@ selectLevel.addEventListener("change", getValor);
 
 function getValor(){
 	valor = selectLevel.value;		
-	var local = {"selectvalor": valor}	
+	var local = {"selectLevel": valor}	
     localStorage.setItem("nivel",valor)
 }
 

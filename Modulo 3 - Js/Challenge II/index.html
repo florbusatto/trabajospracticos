@@ -1,108 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">	
+<html lang="en">  
 <head>  
-     <meta charset="utf-8">  
+     <meta charset="utf-8">   
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
      <title>Formulario de Inscripción</title> 
      <link rel="stylesheet" type="text/css" href="css/estilo.css"> 
 </head>
-<body>  
-    <div id="container">	
-	     <p>Untitled Page</p>
-	  <form>	
-	 	   <div id="Datos Personales">
-	 	      <p>Formulario de Inscripción</p>	  
-       <div class="DatosObligatorios">
-            <label>Nombre</label>		
-            <input type="text" name="nombre" id="nombre"> 
-            <label class="error obLabel">*</label> 
-       </div> 
-       <div class="DatosObligatorios">
-           	<label>Apellido</label>
-            <input type="text" name="apellido" id="apellido"> 
-            <label class="error obLabel">*</label>
-       </div> 
-       <div class="DatosObligatorios">	
-           	<label>Nacionalidad</label>	
-            <select id="Nacionalidad">  
-            <option value="-1">Seleccione un país</option>
-            </select>				
-       </div>   
-       <div class="DatosObligatorios">
-            <label>Fecha de Nacimiento</label>
-            <input type="text" name="Nacimiento" id="Nacimiento"> 
-            <label class="error obLabel">*</label>
-       </div>   
-       <div class="DatosObligatorios">
-            <label>Tipo de Documento</label>
-            <select id="Documento">   
-            </select>
-       </div> 
-       <div class="DatosObligatorios">
-           <label>Número de Documento</label>	
-           <input type="text" name="número" id= "NumDoc">  
-           <label class="error obLabel">*</label>				
-       </div>
-       <div class="Domicilio">	
-            <label>Calle</label>
-            <input type="text" name="calle" id="calle">   
-            <label class="error obLabel">*</label>				
-       </div>	    
-       <div class="Domicilio">	
-            <label>Número</label>
-            <input type="text" name="número" id="NumCalle">				
-       </div>   
-       <div class="Domicilio">
-            <label>Piso</label>	
-            <input type="text" name="piso" id="piso">				
-       </div>   
-       <div class="Domicilio">
-            <label>Dpto</label> 
-            <input type="text" name="Dpto" id="Dpto">       
-       </div>   
-       <div class="Provincia">    
-          <label>Provincia</label>   
-          <select id="provincias">
-          
-          </select>    
-       </div>	
-        <div id="genero"></div>
-	      <legend>Genero</legend> 	
-            <input type="radio" name="Genero" value="Femenino" id="Femenino"/><label for="Genero">Femenino</label></br>
-            <input type="radio" name="Genero" value="Masculino" id="Masculino"/><label for="Genero">Masculino</label></br>		
-        </div>	
-        <div id="Temas">
-           <p>Temas que le interesan</p>	
-            <input type="checkbox" name="Fútbol" id="Fútbol"/>
-             <label for="Fútbol">Fútbol</label><br />
-	        <input type="checkbox" name="Equitación" id="Equitación" /> 
-	         <label for="Equitación">Equitación</label><br />
-	        <input type="checkbox" name="Golf" id="Golf" /> 
-	        <label for="Golf">Golf</label><br>
-            <br>		
-        </div>	
-        <div id="Peso">	
-         <p>Altura</p>		
-            <p><input type="text" name="Altura"/>
-         <p>Peso</p>	
-            <p><input type="text" name="Peso"/>		
-        </div>	
-        <div id="Contacto">
-         <p>Télefono</p>	
-           <p><input type="text" name="Télefono"/>				
-         <p>E-mail</p>	
-          <p><input type="text" name="E-mail"/>		
-        </div>	
-        <div id="Observaciones">	
-          <p>Observaciones</p>	
-          <form action="textarea" method="post">	
-     	    <textarea rows="4" cols="50" id="box"></textarea>  
-          </form>   
-        </div>   
-        <div id="button">
-           <button type="button" name="Enviar" value="Enviar">Enviar</button>     
-           <button type="reset" id="limpiar">Limpiar</button>
-	      </div>		
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/main.js"></script>
+<body>
+  <div id="container">
+    <h1>Formulario de inscripción</h1>
+    <p>Los campos indicados con * son obligatorios</p>
+    <form>
+      <div class="campo_Obligatorio">
+        <label>Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label class="error">*</label>
+      </div>
+      <div class="campo_Obligatorio">
+        <label>Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+        <label class="error">*</label>
+      </div>
+      <div class="campo_Obligatorio">
+        <label>Nacionalidad</label>
+        <select id="nacionalidad">
+        <option value="-1">Seleccione un país</option>
+        </select>
+      </div>
+      <div class="campo_Obligatorio">
+        <label>Fecha de nacimiento</label>
+        <input type="date" name="nacimiento" id="nacimiento">
+        <label class="error" id="menorEdad">*</label>
+      </div>
+      <div class="documentoIdentidad">
+        <label>Documento</label>
+        <select name="documento-tipo" id="tipoDoc">
+          <option value="-1">Tipo</option>
+        </select>
+        <label class="error">*</label>
+      </div>
+      <div class="documentoIdentidad">
+        <label>Número</label>
+        <input type="text" name="doc-num" id="tipoNum">
+        <label class="error">*</label>
+      </div>
+      <div class="campo_Obligatorio">
+        <label>Calle</label>
+        <input type="text" id="calle">
+        <label class="error">*</label>
+      </div>
+      <div class="campo_Obligatorio">
+        <label>Número</label>
+        <input type="text" id="calle-num">
+        <label class="error">*</label>
+      </div>
+      <div class="campoDomicilio">
+        <label>Piso</label>
+        <input type="text" maxlength="2" size="2" id="calle-piso">
+      </div>
+      <div class="campoDomicilio">
+        <label>Dpto.</label>
+        <input type="text" maxlength="3" size="3" id="calle-depto">
+      </div>
+      <div class="field">
+        <label>Provincia</label>
+        <select id="provincias">
+          <option value="-1">Seleccione una provincia</option>
+        </select>
+      </div>
+      <div class="field hidden" id="cityField">
+        <label>Ciudad</label>
+        <select id="citySelect">
+          <option value="-1">Seleccione una ciudad</option>
+        </select>
+      </div>    
+      <div class="field">
+        <label class="titulo">Deportes</label>
+        <div><input type="checkbox" name="deportes-1">Fútbol</div>
+        <div><input type="checkbox" name="deportes-2">Voley</div>
+        <div><input type="checkbox" name="deportes-3">Hockey</div>
+      </div>
+      <div class="field">
+        <label class="titulo">Género</label>
+        <input type="radio" name="genero" value="genero-fem" checked><label for="genero-fem" class="inline-label">Femenino</label>
+        <input type="radio" name="genero" value="genero-masc"><label for="genero-masc" class="inline-label">Masculino</label>
+      </div>
+      <div class="field inline-field">
+        <label>Altura (cm)</label>
+        <input type="text" maxlength="3" size="3" id="altura" class="corto">
+      </div>
+      <div class="field inline-field">
+        <label>Peso (kg)</label>
+        <input type="text" maxlength="3" size="3" id="peso" class="corto">
+      </div>
+      <div class="field">
+        <label>Teléfono</label>
+        <input type="text" name="telefono" id="telefono">
+        <label class="error" id="telError"></label>
+      </div>
+      <div class="campo_Obligatorio">
+        <label>Email</label>
+        <input type="text" name="email" id="email">
+        <label class="error" id="emailError">*</label>
+      </div>
+
+      <div id="Observaciones">  
+             <h2>Observaciones</h2> 
+             <form action="textarea" method="post"> 
+           <textarea rows="4" cols="50" id="box"></textarea>      
+            </div>
+      <div id="buttons">
+        <button type="button" name="enviar" id="enviar">Enviar</button>
+        <button type="reset" id="limpiar">Limpiar</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

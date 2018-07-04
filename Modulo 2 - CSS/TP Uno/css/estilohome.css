@@ -121,13 +121,14 @@ h3 {
         margin: 0 auto;
         align-content: center;  
         padding: 20px;  
+        width: 50%; 
 }
 .slide {      
 /*Mejorar la calidad de las imagenes*/
           padding: 0 auto;  
           margin: 0 auto; 
-          width: 1480px;  
-          height: 340px;  
+          width: 10%;  
+          height: 320px;  
           background-attachment: fixed; 
           background-position: center;  
           opacity: 1.5;  

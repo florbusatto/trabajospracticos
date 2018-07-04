@@ -1,17 +1,20 @@
 var jsonCumple;
-var cumples = [];
+var cumples;
 
-var datosGuardados = localStorage.getItem("cumples");   
+localStorage.clear(); 
 
-if (datosGuardados == null){
-    cumples = [];   
-}else{  
-cumples = JSON.parse(datosGuardados).cumples;   
+var datosGuardados = localStorage.getItem("cumples");
+
+if(datosGuardados == null){
+    cumples = [];
+}else{
+    // Cargo el arreglo cumples con la info guardada
+    cumples = JSON.parse(datosGuardados).cumples;
 }
 
 console.log(datosGuardados);
 
-$('#Guardar').on('click', function(e){
+$('#guardar').on('click', function(e){
     
     let Datos = {
         nombre: $("#Nombre").val(),
@@ -35,6 +38,8 @@ $('#Guardar').on('click', function(e){
     let data =  JSON.stringify(jsonCumple);
 
     localStorage.setItem("cumples",data);             
+
+    /* Limpia los campos */
 
     var input = $('input');
     $.each(input, function(indice, elemento){

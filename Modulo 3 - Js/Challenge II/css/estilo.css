@@ -1,0 +1,44 @@
+*	
+{margin: 0 auto;	
+ box-sizing: border-box;	
+}	
+body {
+	 background-color: skyblue;
+}	
+h1, h2 {
+	color: black;	
+	font-family: arial;	
+	font-weight: bold;	
+	margin: 12px;
+	font-size:medium;
+}		
+p, label{
+	color: black;	
+	font-family: arial;		
+	margin: 12px;
+	font-size:small;
+}	
+.error{
+	color:red;
+	font-size:9px;
+}		
+input { 	
+  margin: 2px;	
+  padding: 1px;
+}	
+select { 		
+  color: black;
+}	
+form { border: solid 1px;		
+  font-size: small;		
+  margin: 20px 200px 0 20px;	
+  text-align: left;	
+  padding-left: 20px;		
+  padding-bottom: 20px;	
+  padding-top: 20px;	
+}	
+.titulo { 			
+  font-size: small;		
+  margin: 20px;	
+  text-align: left;		
+}	

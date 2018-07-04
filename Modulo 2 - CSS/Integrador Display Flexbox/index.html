@@ -1,35 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>	
-	<meta charset="utf-8">
-	<title>Librería</title>	
+	<meta charset="utf-8">   
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Librería Harry Potter</title>	
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>			
-   <div id="container">
-      <nav id="navbar">	
-	     <li><a href="#Home">Home></a></li>	
-         <li><a href="#Libros">Libros></a></li>
+   <div id="mainContainer"> 
+      <nav id="navbar">	  
+       <figure><img src="img/logo.jpg" alt="logo" id="logo"></figure>
+	      <li><a href="#Home">Home ></a></li>	
+         <li><a href="#Libros">Libros ></a></li>
          <li><a href="#Destacados">Destacados</a></li>	
          <input type="text" name="buscar" id= buscar>		
-	     <input type="button" name="¿Qué vas a leer hoy?" value="Buscar" id=button>
+	       <input type="button" name="¿Qué vas a leer hoy?" value="Buscar" id=button>
 	   </nav>	
    </div>	
-   <div id="libreria">	
-	   <div id="imagenes">	
-	   					 <figure>	
-                    		<img src ="img\harry_potter.png" alt="harrypotter" id="harrypotter">	
-                    		<h4>Harry Potter y la piedra Filosofal</h4>	
-                    		<p></p>	
-                  		</figure>	
-                  		<figure>	
-                    		<img src ="img\harry_potter2.jpg" alt="harrypotter2" id="harrypotter2">	
-                    		<h4>Harry Potter y el prisionero de Azkaban</h4>	
-                    		<p></p>	
-                  		</figure>	
+   <div class="row">
+      <div class="libros">
+        <figure><img src="img/piedrafilosofal.png" alt="Harry Potter y la piedra filosofal"></figure>
+        <figcaption>
+          <h1>Harry Potter y la Piedra Filosofal</h1>
+          <p>Harry Potter se ha quedado huérfano y vive en casa de sus abominables tíos y del insoportable primo Dudley. Harry se siente muy triste y solo, hasta que un buen día recibe una carta que cambiaría su vida para siempre. En ella le comunican que ha sido aceptado como alumno en el colegio in terno Hogwarts de magia y hechicería. A partir de ese momento, la suerte de Harry le da un vuelco espectacular..</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+      <div class="libros">
+        <figure><img src="img/camara.jpg" alt="Harry Potter y la càmara secreta" id=camara></figure>
+        <figcaption>
+          <h1>Harry Potter y la Càmara Secreta</h1>
+          <p>Tras derrotar una vez más a Lord Voldemort, Harry espera impaciente en casa de sus insoportables tíos el inicio del segundo curso en Hogwarts. Sin embargo, la espera dura poco, pues un elfo aparece en su habitación y le advierte que una amenaza mortal se cierne sobre la escuela. Así pues, Harry no se lo piensa dos veces y, acompañado de Ron, su mejor amigo, se dirige a Hogwarts. Pero ¿puede un aprendiz de mago defender la escuela de los malvados que pretenden destruirla?</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+        <div class="libros">
+        <figure><img src="img/harry_potter2.jpg" alt="Harry Potter y el prisionero de Azkaban"></figure>
+        <figcaption>
+          <h1>Harry Potter y el prisionero de Azkaban</h1>
+          <p>Por la cicatriz de su frente,sabemos que Harry no es un niño comùn,sino el héroe que venció a Lord Voldemort,el mago más temible de todos los tiempos y culpable de la muerte de los padres de Harry. Mientras aguarda con impaciencia el inicio del tercer curso en Hogwarts,en la prisión de Azkaban se ha escapado un terrible villano:Sirius Black, un asesino serial con poderes mágicos,ex-cómplice de Voldemort y dispuesto a eliminar a Harry..</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+      <div class="libros">
+        <figure><img src="img/caliz.jpg" alt="Harry Potter y el càliz de Fuego" id="caliz"></figure>
+        <figcaption>
+          <h1>Harry Potter y el càliz de Fuego</h1>
+          <p>Tras otro abominable verano con los Dursley, Harry se dispone a iniciar el cuarto curso en Hogwarts. A sus 14 años, a Harry le gustaría ser un joven mago como los demás, encontrarse con sus amigos Ron y Hermione, y asistir con ellos a los Mundiales de Quidditch. Sin embargo, al llegar al colegio, le espera una gran sorpresa que lo obligará a enfrentarse a los desafíos más temibles de toda su vida. Si los supera, habrá demostrado que ya no es un niño, y que está preparado para vivir las emocionantes experiencias que el futuro le depara…</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+    </div>
 
-	    </div>	
-	  </div>
+    <div class="row">
+      <div class="libros">
+        <figure><img src="img/fenix.jpg" alt="Harry Potter y la Orden del Fénix" id="fenix"></figure>
+        <figcaption>
+          <h1>Harry Potter y la Orden del Fénix</h1>
+          <p>Las tediosas vacaciones de verano con sus tíos aùn no  acaban, y Harry se encuentra más inquieto que nunca. Apenas ha tenido noticias de Ron y Hermione, y presiente que algo extraño está sucediendo. En efecto, al comenzar otro curso, sus temores se vuelven realidad. El Ministerio de Magia niega que Voldemort haya regresado y ha iniciado una campaña de desprestigio contra Harry y Dumbledore, para lo cual ha asignado a la horrible profesora Dolores Umbridge la tarea de vigilar todos sus movimientos..Harry sospecha que Voldemort puede adivinar sus pensamientos, e intuye que el temible mago trata de apoderarse de un objeto secreto que le permitiría recuperar su poder destructivo.</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+      <div class="libros">
+        <figure><img src="img/principe.jpg" alt="Harry Potter y el Misterio del Príncipe" id="principe"></figure>
+        <figcaption>
+          <h1>Harry Potter y el Misterio del Príncipe</h1>
+          <p>Con 16 años cumplidos, Harry inicia el sexto curso en Hogwarts en medio de terribles acontecimientos que asolan Inglaterra. Elegido capitán del equipo de Quidditch, los entrenamientos, los exámenes y las chicas ocupan todo su tiempo, pero la tranquilidad dura poco. A pesar de los férreos controles que protegen la escuela, dos alumnos son brutalmente atacados. Dumbledore sabe que se acerca el momento, anunciado por la profecía, en que Harry y Voldemort se enfrentarán a muerte. El anciano director solicitará la ayuda de Harry y juntos emprenderán peligrosos viajes para intentar debilitar al enemigo, para lo cual el joven mago contará con la ayuda de un viejo libro de pociones perteneciente a un misterioso príncipe: el Príncipe Mestizo.</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+        <div class="libros">
+        <figure><img src="img/harry_potter2.jpg" alt="Harry Potter y las Reliquias de la Muerte"></figure>
+        <figcaption>
+          <h1>Harry Potter y las Reliquias de la Muerte</h1> 
+          <p>La fecha crucial se acerca: cuando cumpla 17 años,Harry perderá el encantamiento protector que lo mantiene a salvo. El anunciado enfrentamiento a muerte con Voldemort es inminente, y la misión de encontrar y destruir los restantes Horrocruxes más urgente que nunca. Ha llegado la hora final: Harry debe abandonar la calidez y seguridad de La Madriguera para seguir sin vacilaciones el inexorable sendero trazado para él. Consciente de lo mucho que está en juego, sólo dentro de sí mismo encontrará la fuerza necesaria que lo impulse a enfrentarse con su destino.</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
+      <div class="libros">
+        <figure><img src="img/legado.jpg" alt="Harry Potter y el Legado Maldito" id="legado"></figure>
+        <figcaption>
+          <h1>Harry Potter y el Legado Maldito</h1>
+          <p>Siempre ha sido difícil ser Harry Potter, y esto no se ha vuelto más fácil ahora que es empleado del Ministerio de Magia con exceso de trabajo, esposo y padre de tres hijos. Mientras que Harry se enfrenta a un pasado que se rehúsa a quedarse donde pertenece, su hijo Albus deberá lidiar con el peso del legado de la familia que él nunca quiso. El pasado como el presente se funden ominosamente, y padre e hijo aprenderán una verdad desagradable: a veces, la oscuridad proviene de los lugares menos esperados.</p>
+        </figcaption>
+        <button>Comprar</button>
+      </div>
 
 </body>
 </html>
