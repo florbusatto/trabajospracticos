@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  #main
+    #left
+      h1 Encuesta de tecnología
+      form(action='')
+        .pais
+          h3#labelPaises País de residencia
+          select(name='' id='paises')
+            option(value='') Elija una opción
+    #right
+      #tableDiv        
+        table#table
+          tr#firstRow
+            th 
+              input(type='checkbox')
+            th País de residencia
+            th Lenguaje
+            th Sistema operativo
+            th
+      .chart
+        canvas#myChart
+        //-input#chartBtn(type='button' value="Stats")
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+  script(src='javascripts/encuesta.js')

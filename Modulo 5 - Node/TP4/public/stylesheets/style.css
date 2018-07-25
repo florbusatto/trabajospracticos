@@ -1,0 +1,124 @@
+*{
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding:1.5em;
+}
+#mainContainer {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  border-radius:5px;
+  box-shadow: darkgrey 1px 1px 2px;
+}
+#left{
+  background-color: rgb(41, 41, 41); 
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+  padding: 2em;
+  padding: 2em 2em 2em 3em;
+  color: rgba(84,255,172,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity:0.9;
+}
+#right{
+  background: rgba(84,255,172,1);
+  background: -moz-linear-gradient(45deg, rgba(84,255,172,0.8) 0%, rgba(50,173,148,0.8) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(84,255,172,0.8)), color-stop(100%, rgba(50,173,148,1)));
+  background: -webkit-linear-gradient(45deg, rgba(84,255,172,0.8) 0%, rgba(50,173,148,0.8) 100%);
+  background: -o-linear-gradient(45deg, rgba(84,255,172,0.8) 0%, rgba(50,173,148,0.8) 100%);
+  background: -ms-linear-gradient(45deg, rgba(84,255,172,0.8) 0%, rgba(50,173,148,0.8) 100%);
+  background: linear-gradient(45deg, rgba(84,255,172,0.8) 0%, rgba(50,173,148,0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54ffac', endColorstr='#32ad94', GradientType=1 );
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  /*opacity:0.8;*/
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+h1{
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+h3, #pais, #lenguajes, #sistema, .btn{
+  margin: 0.5em 0;
+}
+#labelPaises{
+  display: inline-block;
+  margin-right: 0.5em;
+}
+#paises{
+  background-color:  rgb(36, 36, 36);
+    color:  rgba(84,255,172,1);
+    border: 1px solid rgba(84,255,172,1);
+    font-size: 16px;
+}
+form label{
+  margin: 0 0.5em;
+}
+.radioBtn{
+  margin-right: 0.3em;
+}
+#pais, #lenguajes, #sistema,.btn{
+  width: 100;
+}
+#enviar {
+  width: 100%;
+  background: rgba(84,255,172,1);
+  border:none;
+  padding: 0.8em 2em;
+  margin-top:1em;
+  font-weight: 700;
+  cursor: pointer;
+  font-size:14px;
+  border-radius: 5px;
+}
+#enviar:hover{
+  background: rgba(50,173,148,1);
+}
+a {
+  color: #00B7FF;
+}
+#tablaFormulario{
+  width: 100%;
+}
+table {
+  width: 90%;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin: 3em auto;
+}
+table, th, td {
+  padding: 5px;
+  border: 2px solid rgb(36, 36, 36);
+  font-size: 12px;
+}
+#firstRow{
+  background-color: rgb(36, 36, 36);
+}
+#firstRow th{
+  color: white;
+}
+.chart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin:0 auto;
+}
+#myChart{
+  width: 80%;
+  height: auto; 
+  margin: 2em auto;
+}
+

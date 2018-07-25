@@ -109,7 +109,7 @@ if (ficha1 && ficha2) {
 }   
         
 if (contador!=2){
-  intentos--
+  intentos++
   mostrarIntentos.innerHTML = (maxIntentos - intentos)     
 }
 
