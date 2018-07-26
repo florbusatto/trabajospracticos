@@ -7,7 +7,7 @@ class CajaBusqueda extends Component {
         return (    
           <div className='resultado'>  
             <form action="/items" method="get">
-                <input id="busqueda" type="text" name="busqueda" placeholder="Explorar"></input>
+                <input id="busqueda" type="text" name="busqueda" placeholder="Explorar">Nunca dejes de Buscar</input>
                 <input type="submit"></input>
             </form>
           </div>
