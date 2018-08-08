@@ -1,62 +1,51 @@
-const rutaImg = "img";
-var cumplesStorage = localStorage.getItem("cumples");
-var cumples = JSON.parse(cumplesStorage).cumples;
+const rutaImg = "img/"
+var guardoCumplesJson = JSON.parse(localStorage.getItem("guardoCumplesJson"));  
+var listaCumples = guardoCumplesJson.listaCumples; 
+var listaLength = guardoCumplesJson.total;  
 
-/**
- *  Recupero los cumples guardados
- **/
-
-function proximosCumples(){
-
-  $.each(cumples,function(index,elem){
-
-    let li = `<li><p><span>${elem.fechaNac}</span>
-          ${elem.nombre}</p>
-          <a href="#" class="borrar" 
-          data-id="${index}">x</a></li>`;
-    $('#cumples').append(li);   
-    
-  });
-} 
-
-function cumpleDelDia(){
-
-  let indice = Math.floor(Math.random() * cumples.length);
-
-  while(indice == cumples.length){
-    indice = Math.floor(Math.random() * cumples.length);    
-  } 
-
-  let cumpleHoyImg  = cumples[indice].imagen; 
-  let cumpleHoyName = cumples[indice].nombre;
-
-  let h1 = `<h1>${cumpleHoyName}</h1>`;
-  let img = `<img src="img/${cumpleHoyImg}.png">`;
-
-  $('#cumple-dia').append(h1);
-  $('#cumple-dia').append(img);
+if (listaCumples == null) {
+  console.log("No existen cumpleaños guardados")
+}
+else {
+  listaCumples.forEach(function(element) {
+    console.log(element.nombre);
+  })
 }
 
-$('.borrar').on('click',e=>{
+function proximosCumples() {
+  $.each(listaCumples, function(index, element) { 
+    let fecha = element.fecha.substring(4,12);
+    let li = $(`<li><span>${fecha}</span> - <span>${element.nombre}</span></li>`);
+    let deleteCumple = $(`<button class="borrarCumple" data-id="${index}">x</button>`);
+    li.append(deleteCumple); 
+    $("#cumples").append(li); 
 
-  e.preventDefault();
-  let li = $(this);
-  li.parent().remove(); // borro del HTML
-  let indice = li.data('id');
-  cumples.splice(indice,1);
-  let jSon = JSON.parse(cumplesStorage);
-  jSon.cumples = cumples;
-  // Guardar en el locaStorage
+    deleteCumple.on("click", function(e) { 
+      e.preventDefault();
+      let indice = $(this).data("id");
+      $(this).closest("li").remove(); 
+      listaCumples.splice(indice, 1); 
+      listaLength = listaCumples.length; 
+      localStorage.setItem("guardoCumplesJson", JSON.stringify(guardoCumplesJson)); 
+      listaCumples.forEach(function(e) {
+      })
+      console.log(guardoCumplesJson.total);
+    });
 });
 
 
-cumpleDelDia();
+}
 
+function cumpleDeHoy() {
+  let indice = Math.floor(Math.random() * listaCumples.length); 
+  let cumpleHoyImg = listaCumples[indice].imagen;
+  let cumpleHoyName = listaCumples[indice].nombre;
+  let h1 = `<h1>${cumpleHoyName}</h1>`;
+  let img = `<img src='${rutaImg}Lego ${cumpleHoyImg}.png'>`;
 
+  $("#cumpleDiaImg").append(h1);
+  $("#cumpleDiaImg").append(img);
 
-
-
-
-
-
-
+}
+proximosCumples();
+cumpleDeHoy();

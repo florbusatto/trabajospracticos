@@ -1,57 +1,38 @@
-var jsonCumple;
-var cumples;
+var guardoCumplesJson = JSON.parse(localStorage.getItem("guardoCumplesJson")) 
+var listaCumples = guardoCumplesJson.listaCumples; 
 
-localStorage.clear(); 
-
-var datosGuardados = localStorage.getItem("cumples");
-
-if(datosGuardados == null){
-    cumples = [];
-}else{
-    // Cargo el arreglo cumples con la info guardada
-    cumples = JSON.parse(datosGuardados).cumples;
+if (guardoCumplesJson == null || guardoCumplesJson == undefined) {
+    listaCumples = []; 
+}
+else {
+    listaCumples.forEach(function(e) {
+        console.log(e.nombre); 
+    })
 }
 
-console.log(datosGuardados);
-
-$('#guardar').on('click', function(e){
-    
-    let Datos = {
-        nombre: $("#Nombre").val(),
-        fechaNac: $("#fechaNac").val(),
-        imagen: $("#elegida").val()
-    };
-    
-    console.log(Datos);
-    // array de objetos Datos
-    cumples.push(Datos);
-    
-    console.log(cumples);
-
-    jsonCumple = {
-                    'cumples': cumples,
-                    'total': cumples.length
-                 }
-
-    console.log(jsonCumple);
-    
-    let data =  JSON.stringify(jsonCumple);
-
-    localStorage.setItem("cumples",data);             
-
-    /* Limpia los campos */
-
-    var input = $('input');
-    $.each(input, function(indice, elemento){
-        if (elemento.type != 'button'){
-            $(elemento).val('');
-        } 
-    })
+$("img").on("click", function(e) { 
+    e.preventDefault();
+    let imgName = $(this).data("nombre");
+    $("#imgName").val(imgName);
 })
 
-$('img').on('click',function(e){
-   $("#elegida").val($(this).data('nombre'));
+
+$("button").on("click", function(e) { 
+    e.preventDefault();
+    let homejeada = { 
+        'nombre': $("#name").val(),
+        'fecha':  $("#date").val(),
+        'imagen': $("#imgName").val()
+    };
+
+    listaCumples.push(homejeada); 
+
+    guardoCumplesJson = { 
+        'listaCumples': listaCumples,
+        'total': listaCumples.length
+    };
+
+    let jsonCumpleString = JSON.stringify(guardoCumplesJson); 
+    localStorage.setItem("guardoCumplesJson", jsonCumpleString); 
 });
-
-
 

@@ -1,36 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>	
-	<meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">	  
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
-  <title>Happy B-day!</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" /> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> B-day!!</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
+<body>
+  <div id="containerCumple">
+    <a href="home.html" target="_blank">Ver cumpleaños de hoy</a>
+    <form>
+      <input type="text" placeholder="Nombre" id="name">
+      <label>Fecha de nac.</label>
+      <input type="date" id="date" max="2018-01-01">
+      <input type="text" id="imgName" placeholder="Selecciona Imagen" readonly/>
+      <button>Enviar</button>
+    </form>
+    <div id="imgSelect">
+      <img src="img/Lego anakin.png" alt="Anakin" data-nombre="Anakin" id="anakin" />
+      <img src="img/Lego obiwan.png" alt="Obiwan" data-nombre="Obiwan" id="obiwan" />
+      <img src="img/Lego vader.png" alt="Darth Vader" data-nombre="Vader" id="vader" />
+      <img src="img/Lego yoda.png" alt="Yoda" data-nombre="Yoda" id="yoda" />
+    </div>
+  </div>
 
-<body>				
-      <div class="container">  
-        <div class= 'inputs'>
-                <input type="text" name="text" placeholder="Nombre" id="Nombre" >
-                <input type="date" name='fecha' placeholder="Fecha de Nacimiento" id="fechaNac">
-                <input id="elegida" type='text' name='imagen' placeholder="Imagen seleccionada">
-        </div>		
-      <div class="imagenes">
-            <h3>Imágenes Favoritas</h3>
-            <div class='linea'> 
-                    <img src="img/ada.png" data-nombre="ada" id="ada" />
-                    <img src="img/anakin.png" data-nombre="anakin"/>
-                    <img src="img/vader.png" data-nombre="vader" />
-                    <img src="img/obiwan.png" data-nombre="obiwan"/>
-                    <img src="img/yoda.png" data-nombre="yoda"/>
-            </div>
-      </div>
-            <input type="button" name="Guardar" value="Guardar" id ='guardar'/> 
-
-     </div>
-
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,54 +1,134 @@
-*	
-{margin: 0 auto;	
- box-sizing: border-box;	
-}		
-body{
-	background-image: url(../img/logo.png);
-}	
-.container
-{				
- margin: 50px;	
- padding: 50px;	
- width: 800px;	
- height: 400px;	
- border:outset 3px;	
- background-color: yellow;	
-
-}	
-.inputs{	
- display: flex;	
- justify-content: space-around;	
-}		
-h3{		
- font-size: medium;	
- font-weight: bold;	
- font-family: sans-serif;	
- font-family: verdana;
- text-align: left;	
- padding: 5px;	
- margin: 25px;
-}	
-#ada		
-{ height: 36px;	
-  width: 36px;	
-  display: flex;	
-  justify-content: flex-start;	
-  border-radius: 28px;
+* { 
+  box-sizing: border-box;
+  margin:0 auto;
+  padding:0; 
 }
-img {	
-    height: 150px;	
-    width: 150px;		
-    display: inline-block;
-   margin: 10px;		
-}	
-#guardar{	
-		 margin: 50px;	
-		 padding: 15px;		
-		 border-radius: 8px;
-}
-button #guardar{	
-		 margin: 50px;	
-		 padding: 15px;		
-		 border-radius: 8px;
 
+body {
+  font-family: "Lato";
+  color:black;    
+  background-image: url("../img/logo.png"); 
+}
+
+#containerHome {
+  width:50%;  
+  background-color: yellow; 
+  border: outset 1px; 
+  border-radius: 4px 8px;
+  margin:0 auto;  
+  margin-top: 10px;
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#cumpleHoy {
+  margin: 0 auto;
+}
+
+h1, h3{
+  margin:10px;
+  font-size: larger;
+}
+
+img {
+  max-height:100px; 
+  max-width: 20%;
+  margin:20px;
+}
+
+#cumplesProximos {
+  padding:20px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+ul li {
+  display:inline-block;
+  margin:0 auto;
+  font-size:medium;
+}
+
+ul li:after {
+  content: "|";
+}
+
+ul li button {
+  margin:0 10px;
+}
+
+a { 
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Lato";
+  color:tomato; 
+  cursor: pointer;
+}
+
+#containerCumple {
+  width:90%;  
+  max-height: 720px;
+  margin:0 auto;  
+  margin-top: 15px;
+  text-align: center;   
+  background-color: yellow; 
+  border: outset 1px; 
+  border-radius: 4px 8px;
+}
+
+form {
+  margin:10px;  
+  padding: 5px; 
+  height: 180px;
+}
+
+form input, label, button {
+  font-size:medium;
+  font-family:"Lato"; 
+  font-weight: normal;  
+  text-align: left; 
+  border-color: white;  
+  border-radius: 4px; 
+  height: 30px;
+}
+
+label, input {
+  margin: 10px 5px;
+}
+
+input {
+  padding:2px 0;
+  border:1px solid white;
+}
+
+button {
+  padding:0 5px;
+}
+
+#imgSelect {
+  width:95%;
+  margin:50px auto;
+}
+
+#anakin, #obiwan, #vader, #yoda {
+  width:250px;
+  height: 400px;
+  margin:10px;  
+  cursor: pointer;
+}
+
+@media (max-width:1100px) {
+  form {
+    height:auto;
+    text-align:left;
+    margin-bottom:20px;
+  }
+
+  form input, form label {
+    display:block;
+    margin:10px 0;
+  }
 }
