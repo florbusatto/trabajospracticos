@@ -1,32 +1,47 @@
-header{
-	height: 200px;
+* {
+  margin:0 auto;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {	
+	width: 100%;
+}
+
+header {	
+	width: 100%;
+	height: 150px;
 	background: tomato;
-	text-align: center;
+	text-align: center;	
+	margin-top: 10px;
 }
 
-header h1{
-	font-size: 22px;
+header h1 {
+	font-size: large;	
+	font-weight: bold;	
+	font-family: "Lato";	
+	margin: 0 auto;	
+	margin-top: 10px;
 }
 
-.products-row{
-
+.products-row {
 	display: flex;
 	justify-content: space-between;
 }
 
-.product{
-
+.product {
 	width: 20%;
 }
 
-.precio{
-
+.precio {
 	font-weight: bold;
 }
 
-footer{
-
+footer {
 	height: 100px;
 	background: tomato;
-	text-align: center;
+	text-align: center;	
+	font-weight: bold;	
+	font-size: medium;	
+	font-family: "Lato";
 }
